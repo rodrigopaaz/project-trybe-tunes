@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/project-trybe-tunes/static/css/main.c9a8d3d6.css",
+    "main.js": "/project-trybe-tunes/static/js/main.4eaacfbb.js",
+    "static/media/BG AZUL.png": "/project-trybe-tunes/static/media/BG AZUL.4c692090f9f777d10dcf.png",
+    "static/media/music.png": "/project-trybe-tunes/static/media/music.e7f54885b245798fdfea.png",
+    "index.html": "/project-trybe-tunes/index.html",
+    "main.c9a8d3d6.css.map": "/project-trybe-tunes/static/css/main.c9a8d3d6.css.map",
+    "main.4eaacfbb.js.map": "/project-trybe-tunes/static/js/main.4eaacfbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9a8d3d6.css",
+    "static/js/main.4eaacfbb.js"
+  ]
+}
