@@ -71,106 +71,95 @@ class ProfileEdit extends React.Component {
         <Header />
         <div className="album_list">
           <div className="main__album_header">
-            <div className="search">
-              {!usuario.image
-                ? (
-                  <img
-                    data-testid="profile-image"
-                    src={ emptyUser }
-                    alt="userVazio"
-                    className="perfil"
-                  />)
-                : (
-                  <img
-                    data-testid="profile-image"
-                    src={ usuario.image }
-                    alt="user"
-                    className="perfil"
-                  />)}
-              <div>
-                <label
-                  htmlFor="image"
-                >
-                  <input
-                    id="image"
-                    name="image"
-                    type="text"
-                    data-testid="edit-input-image"
-                    value={ usuario.image }
-                    onChange={ this.handleChange }
-                    placeholder="Insira o link de uma imagem"
-                  />
-                </label>
-              </div>
-            </div>
+            {!usuario.image
+              ? (
+                <img
+                  data-testid="profile-image"
+                  src={ emptyUser }
+                  alt="userVazio"
+                  className="perfil"
+                />)
+              : (
+                <img
+                  data-testid="profile-image"
+                  src={ usuario.image }
+                  alt="user"
+                  className="perfil"
+                />)}
+            <label
+              htmlFor="image"
+            >
+              <input
+                id="image"
+                name="image"
+                type="text"
+                data-testid="edit-input-image"
+                value={ usuario.image }
+                onChange={ this.handleChange }
+                placeholder="Insira o link de uma imagem"
+              />
+            </label>
           </div>
           <div className="favorites__result_profile">
-            <div className="profile__description_edit">
-              <div className="checkName">
-                <label htmlFor="name">
-                  Name
-                  <input
-                    placeholder="Insira seu nome"
-                    id="name"
-                    name="name"
-                    type="text"
-                    data-testid="edit-input-name"
-                    value={ usuario.name }
-                    onChange={ this.handleChange }
+            <label htmlFor="name">
+              Name
+              <input
+                placeholder="Insira seu nome"
+                id="name"
+                name="name"
+                type="text"
+                data-testid="edit-input-name"
+                value={ usuario.name }
+                onChange={ this.handleChange }
 
-                  />
-                </label>
-                {this.checkName(usuario.name)
-                  ? <img src={ check } alt="b" className="check" />
-                  : <img src={ error } alt="b" className="error" />}
-              </div>
-              <div className="checkEmail">
-                <label
-                  htmlFor="email"
-                >
-                  Email:
-                  <input
-                    placeholder="Insira seu email"
-                    id="email"
-                    name="email"
-                    type="text"
-                    value={ usuario.email }
-                    onChange={ this.handleChange }
-                    data-testid="edit-input-email"
-                  />
-                </label>
-                {this.validMail(usuario.email)
-                  ? <img src={ check } alt="b" className="check" />
-                  : <img src={ error } alt="b" className="error" />}
-              </div>
-              <div className="checkDescription">
-                <label
-                  htmlFor="description"
-                >
-                  Description:
-                  <textarea
-                    placeholder="Nos conte um pouco sobre você"
-                    name="description"
-                    type="text"
-                    data-testid="edit-input-description"
-                    value={ usuario.description }
-                    onChange={ this.handleChange }
-                  />
-                </label>
-                {this.checkDescription(usuario.description)
-                  ? <img src={ check } alt="b" className="check" />
-                  : <img src={ error } alt="b" className="error" />}
-              </div>
-              <button
-                type="button"
-                data-testid="edit-button-save"
-                disabled={ !this.checkData() }
-                onClick={ this.updateUser }
-              >
-                Save
+              />
+            </label>
+            {this.checkName(usuario.name)
+              ? <img src={ check } alt="b" className="check" />
+              : <img src={ error } alt="b" className="error" />}
 
-              </button>
-            </div>
+            <label
+              htmlFor="email"
+            >
+              Email:
+              <input
+                placeholder="Insira seu email"
+                id="email"
+                name="email"
+                type="text"
+                value={ usuario.email }
+                onChange={ this.handleChange }
+                data-testid="edit-input-email"
+              />
+            </label>
+            {this.validMail(usuario.email)
+              ? <img src={ check } alt="b" className="check" />
+              : <img src={ error } alt="b" className="error" />}
+            <label
+              htmlFor="description"
+            >
+              Description:
+              <textarea
+                placeholder="Nos conte um pouco sobre você"
+                name="description"
+                type="text"
+                data-testid="edit-input-description"
+                value={ usuario.description }
+                onChange={ this.handleChange }
+              />
+            </label>
+            {this.checkDescription(usuario.description)
+              ? <img src={ check } alt="b" className="check" />
+              : <img src={ error } alt="b" className="error" />}
+            <button
+              type="button"
+              data-testid="edit-button-save"
+              disabled={ !this.checkData() }
+              onClick={ this.updateUser }
+            >
+              Save
+
+            </button>
           </div>
         </div>
       </div>

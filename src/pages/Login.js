@@ -38,27 +38,25 @@ class Login extends React.Component {
         <div className="mainLogin">
           <div className="form__login">
             <img src={ logo } alt="" srcSet="" />
-            <div className="name__button">
-              <label htmlFor="name">
-                <input
-                  type="text"
-                  id="name"
-                  data-testid="login-name-input"
-                  value={ user }
-                  onChange={ this.checkLogin }
-                  placeholder="Qual o seu nome?"
-                />
-              </label>
-              <button
-                data-testid="login-submit-button"
-                type="button"
+            <label htmlFor="name">
+              <input
+                type="text"
                 id="name"
-                disabled={ checkLength }
-                onClick={ this.fetchUser }
-              >
-                Entrar
-              </button>
-            </div>
+                data-testid="login-name-input"
+                value={ user }
+                onChange={ this.checkLogin }
+                placeholder="Qual o seu nome?"
+              />
+            </label>
+            <button
+              data-testid="login-submit-button"
+              type="button"
+              id="name"
+              disabled={ checkLength }
+              onClick={ this.fetchUser }
+            >
+              Entrar
+            </button>
           </div>
           <div />
         </div>

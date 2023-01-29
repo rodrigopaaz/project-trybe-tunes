@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IconName } from 'react-icons/bs';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
@@ -46,10 +45,8 @@ class Album extends React.Component {
                 srcSet=""
                 className="artist_image"
               />
-              <div className="ambum__description">
-                <p data-testid="artist-name">{artist.artistName }</p>
-                <p data-testid="album-name">{artist.collectionName }</p>
-              </div>
+              <p data-testid="artist-name">{artist.artistName }</p>
+              <p data-testid="album-name">{artist.collectionName }</p>
             </div>
           </div>
           <div className="favorites__result">

@@ -15,6 +15,11 @@ class App extends React.Component {
         <Switch>
           <Route
             exact
+            path="/project-trybe-tunes"
+            component={ Login }
+          />
+          <Route
+            exact
             path="/"
             component={ Login }
           />

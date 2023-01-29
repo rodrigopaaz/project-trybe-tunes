@@ -51,25 +51,23 @@ class Profile extends React.Component {
             </div>
           </div>
           <div className="favorites__result_profile">
-            <div className="profile__description">
-              <p>
-                <p>Name</p>
-                <p>{usuario.name}</p>
-              </p>
-              <p>
-                <p>E-mail</p>
-                <p>{usuario.email}</p>
-              </p>
-              <p>
-                <p>Description</p>
-                <p>{usuario.description}</p>
-              </p>
-              <Link
-                to="../profile/edit"
-              >
-                Editar perfil
-              </Link>
-            </div>
+            <p>
+              <p>Name</p>
+              <p>{usuario.name}</p>
+            </p>
+            <p>
+              <p>E-mail</p>
+              <p>{usuario.email}</p>
+            </p>
+            <p>
+              <p>Description</p>
+              <p>{usuario.description}</p>
+            </p>
+            <Link
+              to="../profile/edit"
+            >
+              Editar perfil
+            </Link>
           </div>
         </div>
       </div>
